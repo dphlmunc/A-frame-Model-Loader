@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="apple-mobile-web-app-capable" />
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<p>Hello world</p>
+<a-scene>
+    <a-assets>
+        <a-asset-item id="object" src="models/pokeball-vray.obj"></a-asset-item>
+        <a-asset-item id ="material" src="models/pokeball-vray.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-obj-model src="#object" mtl="#material">
+    </a-obj-model>
+
+    <a-entity position="0 200 150">
+        <a-camera></a-camera>
+    </a-entity>
+
+
+    <!----------Localload on A-frame docs---------------------------------------------------
+    <a-entity obj-model="obj: #pokeball-obj; mtl: #pokeball-mtl"></a-entity>
+
+    ----------------------------------------------------------------------------------------->
+
+    <!----------------- Inline loader       -------------------------------------------------
+    <a-entity obj-model="obj: url(/path/to/tree.obj); mtl: url(/path/to/tree.mtl)"></a-entity>
+    ----------------------------------------------------------------------------------------->
+
+</a-scene>
+</body>
+</html>
